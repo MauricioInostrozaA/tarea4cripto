@@ -1,0 +1,118 @@
+hashcat (v6.1.1-116-gfb219e0a6) starting...
+
+CUDA API (CUDA 11.1)
+====================
+* Device #1: GeForce GTX 950, skipped
+
+OpenCL API (OpenCL 1.2 CUDA 11.1.102) - Platform #1 [NVIDIA Corporation]
+========================================================================
+* Device #2: GeForce GTX 950, 1600/2048 MB (512 MB allocatable), 6MCU
+
+OpenCL API (OpenCL 1.2 ) - Platform #2 [Intel(R) Corporation]
+=============================================================
+* Device #3: Intel(R) HD Graphics 4600, skipped
+* Device #4: Intel(R) Core(TM) i5-4440 CPU @ 3.10GHz, skipped
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+Minimim salt length supported by kernel: 0
+Maximum salt length supported by kernel: 256
+
+Counting lines in archivo_2...                              Counted lines in archivo_2...                             Parsing Hashes: 1/1000 (0.10%)...                                 Parsed Hashes: 1000/1000 (100.00%)                                  Sorting hashes...                 Sorted hashes...                Removing duplicate hashes...                            Removed duplicate hashes...                           Sorting salts...                Sorted salts...               Generating bitmap tables...                           Generated bitmap tables...                          Hashes: 1000 digests; 1000 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Applicable optimizers applied:
+* Zero-Byte
+* Early-Skip
+* Not-Iterated
+* Single-Salt
+* Raw-Hash
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Using pure kernels enables cracking longer passwords but for the price of drastically reduced performance.
+If you want to switch to optimized backend kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Temperature abort trigger set to 90c
+
+Initializing device kernels and memory...                                         Initializing backend runtime for device #2...                                             Initialized backend runtime for device #2...                                            Host memory required for this attack: 105 MB
+
+Initialized device kernels and memory...                                        Dictionary cache hit:
+* Filename..: diccionario_1.dict
+* Passwords.: 12648
+* Bytes.....: 100249
+* Keyspace..: 12648
+
+                                                 The wordlist or mask that you are using is too small.
+This means that hashcat cannot use the full parallel power of your device(s).
+Unless you supply more work, your cracking speed will drop.
+For tips on supplying more work, see: https://hashcat.net/faq/morework
+
+                                                 [s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  Approaching final keyspace - workload adjusted.
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  
+Session..........: hashcat
+Status...........: Exhausted
+Hash.Name........: md5($pass.$salt)
+Hash.Target......: archivo_2
+Time.Started.....: Tue Nov 10 00:51:01 2020 (1 sec)
+Time.Estimated...: Tue Nov 10 00:51:02 2020 (0 secs)
+Guess.Base.......: File (diccionario_1.dict)
+Guess.Queue......: 1/2 (50.00%)
+Speed.#2.........: 10545.3 kH/s (0.21ms) @ Accel:1024 Loops:1 Thr:64 Vec:1
+Recovered........: 78/1000 (7.80%) Digests
+Progress.........: 12648/12648 (100.00%)
+Rejected.........: 0/12648 (0.00%)
+Restore.Point....: 12648/12648 (100.00%)
+Restore.Sub.#2...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#2....: 0 -> zzzzzzzzzz
+Hardware.Mon.#2..: Temp: 45c Fan:  0% Util:  1% Core:1139MHz Mem:3304MHz Bus:16
+
+Dictionary cache hit:
+* Filename..: diccionario_2.dict
+* Passwords.: 316096
+* Bytes.....: 3040023
+* Keyspace..: 316096
+
+                                                 The wordlist or mask that you are using is too small.
+This means that hashcat cannot use the full parallel power of your device(s).
+Unless you supply more work, your cracking speed will drop.
+For tips on supplying more work, see: https://hashcat.net/faq/morework
+
+                                                 [s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  Approaching final keyspace - workload adjusted.
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  Cracking performance lower than expected?
+
+* Append -O to the commandline.
+  This lowers the maximum supported password- and salt-length (typically down to 32).
+
+* Append -w 3 to the commandline.
+  This can cause your screen to lag.
+
+* Update your backend API runtime / driver the right way:
+  https://hashcat.net/faq/wrongdriver
+
+* Create more work items to make use of your parallelization power:
+  https://hashcat.net/faq/morework
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  
+Session..........: hashcat
+Status...........: Cracked
+Hash.Name........: md5($pass.$salt)
+Hash.Target......: archivo_2
+Time.Started.....: Tue Nov 10 00:51:02 2020 (8 secs)
+Time.Estimated...: Tue Nov 10 00:51:10 2020 (0 secs)
+Guess.Base.......: File (diccionario_2.dict)
+Guess.Queue......: 2/2 (100.00%)
+Speed.#2.........: 22250.9 kH/s (4.80ms) @ Accel:1024 Loops:1 Thr:64 Vec:1
+Recovered........: 1000/1000 (100.00%) Digests
+Progress.........: 316096/316096 (100.00%)
+Rejected.........: 0/316096 (0.00%)
+Restore.Point....: 0/316096 (0.00%)
+Restore.Sub.#2...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#2....: 0 -> zzzzzzzzzz
+Hardware.Mon.#2..: Temp: 45c Fan:  0% Util:  0% Core:1139MHz Mem:3304MHz Bus:16
+
+Started: Tue Nov 10 00:50:59 2020
+                                  Stopped: Tue Nov 10 00:51:12 2020

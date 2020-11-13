@@ -1,0 +1,101 @@
+hashcat (v6.1.1-116-gfb219e0a6) starting...
+
+CUDA API (CUDA 11.1)
+====================
+* Device #1: GeForce GTX 950, skipped
+
+OpenCL API (OpenCL 1.2 CUDA 11.1.102) - Platform #1 [NVIDIA Corporation]
+========================================================================
+* Device #2: GeForce GTX 950, 1600/2048 MB (512 MB allocatable), 6MCU
+
+OpenCL API (OpenCL 1.2 ) - Platform #2 [Intel(R) Corporation]
+=============================================================
+* Device #3: Intel(R) HD Graphics 4600, skipped
+* Device #4: Intel(R) Core(TM) i5-4440 CPU @ 3.10GHz, skipped
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+Counting lines in archivo_5...                              Counted lines in archivo_5...                             Parsing Hashes: 1/20 (5.00%)...                               Parsed Hashes: 20/20 (100.00%)                              Sorting hashes...                 Sorted hashes...                Removing duplicate hashes...                            Removed duplicate hashes...                           Sorting salts...                Sorted salts...               Generating bitmap tables...                           Generated bitmap tables...                          Hashes: 20 digests; 20 unique digests, 20 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Applicable optimizers applied:
+* Zero-Byte
+* Uses-64-Bit
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Using pure kernels enables cracking longer passwords but for the price of drastically reduced performance.
+If you want to switch to optimized backend kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Temperature abort trigger set to 90c
+
+Initializing device kernels and memory...                                         Initializing backend runtime for device #2...                                             Initialized backend runtime for device #2...                                            Host memory required for this attack: 105 MB
+
+Initialized device kernels and memory...                                        Dictionary cache hit:
+* Filename..: diccionario_1.dict
+* Passwords.: 12648
+* Bytes.....: 100249
+* Keyspace..: 12648
+
+                                                 [s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  Cracking performance lower than expected?
+
+* Append -O to the commandline.
+  This lowers the maximum supported password- and salt-length (typically down to 32).
+
+* Append -w 3 to the commandline.
+  This can cause your screen to lag.
+
+* Update your backend API runtime / driver the right way:
+  https://hashcat.net/faq/wrongdriver
+
+* Create more work items to make use of your parallelization power:
+  https://hashcat.net/faq/morework
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  Approaching final keyspace - workload adjusted.
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  
+Session..........: hashcat
+Status...........: Exhausted
+Hash.Name........: sha512crypt $6$, SHA512 (Unix)
+Hash.Target......: archivo_5
+Time.Started.....: Tue Nov 10 00:51:41 2020 (31 secs)
+Time.Estimated...: Tue Nov 10 00:52:12 2020 (0 secs)
+Guess.Base.......: File (diccionario_1.dict)
+Guess.Queue......: 1/2 (50.00%)
+Speed.#2.........:     8115 H/s (1.10ms) @ Accel:2 Loops:32 Thr:1024 Vec:1
+Recovered........: 1/20 (5.00%) Digests, 1/20 (5.00%) Salts
+Progress.........: 252960/252960 (100.00%)
+Rejected.........: 0/252960 (0.00%)
+Restore.Point....: 12648/12648 (100.00%)
+Restore.Sub.#2...: Salt:19 Amplifier:0-1 Iteration:4992-5000
+Candidates.#2....: westcoast -> zzzzzzzzzz
+Hardware.Mon.#2..: Temp: 54c Fan:  0% Util: 90% Core:1139MHz Mem:3304MHz Bus:16
+
+Dictionary cache hit:
+* Filename..: diccionario_2.dict
+* Passwords.: 316096
+* Bytes.....: 3040023
+* Keyspace..: 316096
+
+                                                 [s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  
+Session..........: hashcat
+Status...........: Cracked
+Hash.Name........: sha512crypt $6$, SHA512 (Unix)
+Hash.Target......: archivo_5
+Time.Started.....: Tue Nov 10 00:52:12 2020 (5 mins, 28 secs)
+Time.Estimated...: Tue Nov 10 00:57:40 2020 (0 secs)
+Guess.Base.......: File (diccionario_2.dict)
+Guess.Queue......: 2/2 (100.00%)
+Speed.#2.........:     8725 H/s (8.68ms) @ Accel:2 Loops:32 Thr:1024 Vec:1
+Recovered........: 20/20 (100.00%) Digests, 20/20 (100.00%) Salts
+Progress.........: 5812224/6321920 (91.94%)
+Rejected.........: 0/5812224 (0.00%)
+Restore.Point....: 282624/316096 (89.41%)
+Restore.Sub.#2...: Salt:12 Amplifier:0-1 Iteration:4992-5000
+Candidates.#2....: thebled -> uruQRJuM
+Hardware.Mon.#2..: Temp: 62c Fan: 28% Util: 92% Core:1139MHz Mem:3304MHz Bus:16
+
+Started: Tue Nov 10 00:51:39 2020
+                                  Stopped: Tue Nov 10 00:57:42 2020
