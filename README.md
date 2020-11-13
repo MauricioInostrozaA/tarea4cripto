@@ -3,7 +3,7 @@ Este repositorio contiene la siguientes carpetas:
 
 ## hcrack
 
-_Esta carpeta contiene: _
+Esta carpeta contiene:
 
 * hcrack.py - Este .py debe estar acompaño del ejecutable de hashcat, los archvios a crackear y sus diccionarios.
 * ch-archv(n).txt - El output por consola al crackear los archivos.
@@ -12,7 +12,7 @@ _Esta carpeta contiene: _
 
 ## rehash
 
-_Esta carpeta contiene: _
+Esta carpeta contiene:
 
 * rehashing.py - Este .py debe estar acompañado de los textoplanos obtenidos despues de ser crackeados para rehashearlos con sha3_224
 * textoplano(n).txt - Los valores obtenidos al crackear los hashes (con hcrack.py)
@@ -21,7 +21,7 @@ _Esta carpeta contiene: _
 
 ## server
 
-_Esta carpeta contiene: _
+Esta carpeta contiene:
 
 * server.py - Crea la connección por parte de servidor, decifra y guarda los datos en la base de datos.
 * Rabin.py - Este .py contiene el algoritmo de cifrado y decifrado Rabin.
@@ -30,7 +30,7 @@ _Esta carpeta contiene: _
 
 ## client
 
-_Esta carpeta contiene: _
+Esta carpeta contiene:
 
 * client.py - Crea la connección por parte de cliente, cifra y manda los datos al servidor.
 * Rabin.py - Este .py contiene el algoritmo de cifrado y decifrado Rabin.
